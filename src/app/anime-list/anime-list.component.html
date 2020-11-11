@@ -1,0 +1,35 @@
+ 
+
+    <h2>ANIME HUB</h2>
+
+  <div>Anime Name : <input type="text" id="animename" [(ngModel)]="animename"  placeholder="Insert anime Name.." title="Type in a name"></div>
+  <br>
+  <br>
+  <div>Number of Episodes : <input type="text" id="animeepisodes" [(ngModel)]="episode" placeholder="Insert number of Episodes" title="Type in a name"> </div>
+  <br>
+  <br>
+  <button (click)="Insert()">Insert</button>
+  <br>
+  <br>
+  <button (click)="getAllAnime()">Retrieve Anime List</button>
+  <br>
+  <br>
+    
+    <!-- <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for animes.." title="Type in a name"> -->
+     
+     <div class="backimage"> 
+    <table id="myTable">
+      <tr class="header">
+          <th style="width:10%">Sr.No</th>
+        <th style="width:50%;">AnimeName</th>
+        <th style="width:40%;">Episodes</th>
+      </tr>
+      <tr *ngFor= "let item of animes;">
+          <td>{{item.id}}</td>
+        <td>{{item.animeName}}</td>
+        <td>{{item.episodes}}</td>
+      </tr>
+      
+    </table>
+
+</div>
